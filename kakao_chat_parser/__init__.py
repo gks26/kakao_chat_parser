@@ -27,3 +27,6 @@ class ChatParser():
 
     def get_chat(self):
         return self.__chats__
+
+    def get_members(self):
+        return self.__members__
