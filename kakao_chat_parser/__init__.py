@@ -25,8 +25,11 @@ class ChatParser():
         self.__chats__ = chats
         self.__members__ = list(set(members))
 
-    def get_chat(self):
-        return self.__chats__
-
+    def get_chat(self, member=""):
+        if member == "":
+            return self.__chats__
+        else:
+            chats = [chat for chat in self.__chats__ if chat['member'] == member]
+            return chats
     def get_members(self):
         return self.__members__
